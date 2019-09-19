@@ -11,7 +11,6 @@ public class CustomImageWithButton: UIView {
     
     private let imageView: UIImageView = {
         let view = UIImageView()
-        view.image = UIImage(named: "Factory_Logo")
         return view
     }()
     
@@ -26,6 +25,7 @@ public class CustomImageWithButton: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        imageView.image = getImageFromBundle(name: "Factory_Logo")
         setupStackView()
     }
     
@@ -42,6 +42,15 @@ public class CustomImageWithButton: UIView {
     override public func layoutSubviews() {
         super.layoutSubviews()
         self.stackView.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
+    }
+    
+    private func getImageFromBundle(name: String) -> UIImage {
+        let podBundle = Bundle(for: CustomImageWithButton.self)
+        if let url = podBundle.url(forResource: "CustomImageWithButton", withExtension: "bundle") {
+            let bundle = Bundle(url: url)
+            return UIImage(named: name, in: bundle, compatibleWith: nil)!
+        }
+        return UIImage()
     }
     
 
