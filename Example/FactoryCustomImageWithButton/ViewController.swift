@@ -7,12 +7,29 @@
 //
 
 import UIKit
+import FactoryCustomImageWithButton
 
 class ViewController: UIViewController {
-
+    
+    let cs : CustomImageWithButton = {
+        let view = CustomImageWithButton()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(cs)
+        setupConstraints()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func setupConstraints(){
+        NSLayoutConstraint.activate([
+            cs.topAnchor.constraint(equalTo: view.topAnchor),
+            cs.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            cs.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            cs.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            ])
     }
 
     override func didReceiveMemoryWarning() {

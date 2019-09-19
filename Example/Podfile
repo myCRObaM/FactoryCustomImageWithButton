@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'FactoryCustomImageWithButton_Example' do
-  pod 'FactoryCustomImageWithButton', :path => '../'
+  pod 'FactoryCustomImageWithButton', :path => '/Users/matejhetzel/Desktop/untitled folder 2/FactoryCustomImageWithButton'
 
   target 'FactoryCustomImageWithButton_Tests' do
     inherit! :search_paths

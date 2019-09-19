@@ -1,0 +1,26 @@
+{
+  "name": "FactoryCustomImageWithButton",
+  "version": "0.1.0",
+  "summary": "A short description of FactoryCustomImageWithButton.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/myCRObaM/FactoryCustomImageWithButton",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "myCRObaM": "matej.hetzel@gmail.com"
+  },
+  "resource_bundles": {
+    "FactoryCustomImageWithButton": [
+      "FactoryCustomImageWithButton/*/factory.xcassets"
+    ]
+  },
+  "source": {
+    "path": "FactoryCustomImageWithButton/"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "FactoryCustomImageWithButton/Classes/**/*"
+}
