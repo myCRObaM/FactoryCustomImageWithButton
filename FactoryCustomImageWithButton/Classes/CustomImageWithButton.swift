@@ -22,13 +22,6 @@ public class CustomImageWithButton: UIView {
         return view
     }()
     
-    private let anothertextView: UILabel = {
-        let view = UILabel()
-        view.text = "Go To Factory.hr"
-        view.textColor = .black
-        return view
-    }()
-    
     
     
     override init(frame: CGRect) {
@@ -44,7 +37,6 @@ public class CustomImageWithButton: UIView {
         self.addSubview(stackView)
         
         print(imageView.image)
-        stackView.addArrangedSubview(anothertextView)
         stackView.addArrangedSubview(textView)
         stackView.addArrangedSubview(imageView)
     }
