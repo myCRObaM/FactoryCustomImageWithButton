@@ -24,12 +24,16 @@ class ViewController: UIViewController {
     }
     
     func setupConstraints(){
-        NSLayoutConstraint.activate([
-            cs.topAnchor.constraint(equalTo: view.topAnchor),
-            cs.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            cs.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            cs.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-            ])
+        if #available(iOS 11.0, *) {
+            NSLayoutConstraint.activate([
+                cs.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+                cs.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+                cs.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                cs.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+                ])
+        } else {
+            // Fallback on earlier versions
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -6,7 +6,6 @@ public class CustomImageWithButton: UIView {
         let view = UIStackView()
         view.axis = .vertical
         view.alignment = .center
-        view.backgroundColor = .green
         return view
     }()
     
@@ -19,6 +18,14 @@ public class CustomImageWithButton: UIView {
     private let textView: UILabel = {
         let view = UILabel()
         view.text = "Go To Factory.hr"
+        view.textColor = .black
+        return view
+    }()
+    
+    private let anothertextView: UILabel = {
+        let view = UILabel()
+        view.text = "Go To Factory.hr"
+        view.textColor = .black
         return view
     }()
     
@@ -35,6 +42,9 @@ public class CustomImageWithButton: UIView {
     
     private func setupStackView(){
         self.addSubview(stackView)
+        
+        print(imageView.image)
+        stackView.addArrangedSubview(anothertextView)
         stackView.addArrangedSubview(textView)
         stackView.addArrangedSubview(imageView)
     }
