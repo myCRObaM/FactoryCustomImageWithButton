@@ -25,7 +25,9 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'myCRObaM' => 'matej.hetzel@gmail.com' }
-  s.resource_bundles = { 'FactoryCustomImageWithButton' =>  ['FactoryCustomImageWithButton/*/factory.xcassets']}
+  #s.resource_bundles = { 'FactoryCustomImageWithButton' =>  ['FactoryCustomImageWithButton/*/factory.xcassets']}
+  s.resources = "FactoryCustomImageWithButton/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
+
   s.source           = { :path => "FactoryCustomImageWithButton/"}
   #s.source           = { :git => 'https://github.com/myCRObaM/FactoryCustomImageWithButton.git', :tag => "master"}
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'

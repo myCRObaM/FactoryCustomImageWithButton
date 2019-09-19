@@ -36,7 +36,6 @@ public class CustomImageWithButton: UIView {
     private func setupStackView(){
         self.addSubview(stackView)
         
-        print(imageView.image)
         stackView.addArrangedSubview(textView)
         stackView.addArrangedSubview(imageView)
     }
@@ -48,3 +47,4 @@ public class CustomImageWithButton: UIView {
 
     
 }
+
